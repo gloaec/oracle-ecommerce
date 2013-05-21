@@ -34,9 +34,6 @@ CREATE TABLE products (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Ecommerce Products';
 
--- Taxons
-DROP SYNONYM IF EXISTS taxons_fr;
-DROP VIEW IF EXISTS taxons_view;
 CREATE TABLE taxons (
   id               integer(11)   NOT NULL AUTO_INCREMENT,
   name             varchar(127)  NOT NULL,
@@ -210,6 +207,7 @@ CREATE TABLE images (
 DROP SYNONYM IF EXISTS products_fr;
 DROP SYNONYM IF EXISTS taxons_fr;
 DROP SYNONYM IF EXISTS users_fr;
+DROP SYNONYM IF EXISTS users_secure;
 DROP SYNONYM IF EXISTS orders_fr;
 DROP SYNONYM IF EXISTS variants_fr;
 DROP SYNONYM IF EXISTS payments_fr;
@@ -223,6 +221,7 @@ DROP SYNONYM IF EXISTS images_fr;
 CREATE SYNONYM products_fr FOR products@ecommerce.fr;
 CREATE SYNONYM taxons_fr FOR products@ecommerce.fr;
 CREATE SYNONYM users_fr FOR users@ecommerce.fr;
+CREATE SYNONYM users_secure FOR users@ecommerce.secure;
 CREATE SYNONYM orders_fr FOR orders@ecommerce.fr;
 CREATE SYNONYM variants_fr FOR variants@ecommerce.fr;
 CREATE SYNONYM payments_fr FOR payments@ecommerce.fr;
@@ -298,3 +297,7 @@ SELECT * FROM line_items_fr;
 CREATE VIEW   images_view AS
 SELECT * FROM images UNION 
 SELECT * FROM images_fr;
+
+CREATE VIEW   users_secure_view AS
+SELECT * FROM users u, users_secure us
+WHERE u.id = us.id;
