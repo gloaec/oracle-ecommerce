@@ -1,0 +1,5 @@
+#!/bin/bash
+source /export/home/oracle/oraenv.sh
+export ORACLE_SID=ecommerceus
+cp ./ora/*.ora $ORACLE_HOME/network/admin/
+sqlplus /nolog @./setup.sql

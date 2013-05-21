@@ -1,0 +1,4 @@
+#!/bin/bash
+source /export/home/oracle/oraenv.sh
+export ORACLE_SID=ecommerceus
+echo "connect / as sysdba\nshutdown" | sqlplus /nolog
