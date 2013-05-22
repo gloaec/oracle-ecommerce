@@ -1,0 +1,42 @@
+ECOMMERCE.SECURE =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1520))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = ecomsec)
+    )
+  )
+
+ECOMMERCE.US =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = ecomus)
+    )
+  )
+
+ECOMMERCE.FR =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1522))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = ens081)
+    )
+  )
+
+EXTPROC_CONNECTION_DATA =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = IPC)(KEY = EXTPROC1))
+    )
+    (CONNECT_DATA =
+      (SID = PLSExtProc)
+      (PRESENTATION = RO)
+    )
+  )
+
+

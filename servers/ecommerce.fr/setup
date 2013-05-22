@@ -1,0 +1,9 @@
+#!/bin/bash
+source ./profile
+#cp ./ora/initecomfr.ora $ORACLE_HOME/dbs/
+
+cp ./ora/*.ora $ORACLE_HOME/network/admin/
+cd sql/
+#echo "quit" | sqlplus "/as sysdba" @makedb.sql
+echo "quit" | sqlplus "/as sysdba" @setup.sql
+cd ../
