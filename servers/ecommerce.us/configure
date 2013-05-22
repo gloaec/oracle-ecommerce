@@ -1,10 +1,6 @@
 VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/HostPort" 2221
 VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/GuestPort" 22
 VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/Protocol" TCP
-VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/oracle/HostPort" 1520
-VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/oracle/GuestPort" 1520
 VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/oracle/HostPort" 1521
 VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/oracle/HostPort" 1521
-VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/oracle/GuestPort" 1522
-VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/oracle/GuestPort" 1522
 VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/oracle/Protocol" TCP

@@ -1,0 +1,10 @@
+#!/bin/bash 
+
+echo "Deploy on ecommerce.fr"
+scp -r -P 2222 ecommerce.fr/* oracle@localhost:~
+
+#echo "Deploy on ecommerce.us"
+#scp -r -P 2221 ecommerce.us/* oracle@localhost:~
+
+echo "Deploy on ecommerce.secure"
+scp -r -P 2220 ecommerce.secure/* oracle@localhost:~
