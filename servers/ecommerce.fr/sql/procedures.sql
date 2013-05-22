@@ -1,6 +1,28 @@
+
+-- Auto-increment product_id :
+drop sequence seq_products_pk;
+drop trigger t_products_pk;
+
+create sequence seq_products_pk start with 1 minvalue 0;
+
+create trigger t_products_pk
+before insert on products for each row
+begin
+   select seq_products_pk.nextval into :new.x from dual;
+end;
+-- ---------------------------
+
+create or replace trigger t_update_products_view
+instead of insert on users_view
+for each row declare 
+  x integer;
+begin
+  select   
+end
+
 CREATE OR REPLACE TRIGGER ioft_update_users_view
 INSTEAD OF INSERT
-ON role_permission_view
+ON users_view
 FOR EACH ROW
 DECLARE
  x INTEGER;
