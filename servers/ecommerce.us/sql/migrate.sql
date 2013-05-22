@@ -204,33 +204,33 @@ CREATE TABLE images (
 -- SYNONYMS
 -- -------------------------------
 
-DROP SYNONYM IF EXISTS products_fr;
-DROP SYNONYM IF EXISTS taxons_fr;
-DROP SYNONYM IF EXISTS users_fr;
+DROP SYNONYM IF EXISTS products_us;
+DROP SYNONYM IF EXISTS taxons_us;
+DROP SYNONYM IF EXISTS users_us;
 DROP SYNONYM IF EXISTS users_secure;
-DROP SYNONYM IF EXISTS orders_fr;
-DROP SYNONYM IF EXISTS variants_fr;
-DROP SYNONYM IF EXISTS payments_fr;
-DROP SYNONYM IF EXISTS payments_methods_fr;
-DROP SYNONYM IF EXISTS addresses_fr;
-DROP SYNONYM IF EXISTS shipments_fr;
-DROP SYNONYM IF EXISTS inventory_units_fr;
-DROP SYNONYM IF EXISTS line_items_fr;
-DROP SYNONYM IF EXISTS images_fr;
+DROP SYNONYM IF EXISTS orders_us;
+DROP SYNONYM IF EXISTS variants_us;
+DROP SYNONYM IF EXISTS payments_us;
+DROP SYNONYM IF EXISTS payments_methods_us;
+DROP SYNONYM IF EXISTS addresses_us;
+DROP SYNONYM IF EXISTS shipments_us;
+DROP SYNONYM IF EXISTS inventory_units_us;
+DROP SYNONYM IF EXISTS line_items_us;
+DROP SYNONYM IF EXISTS images_us;
 
-CREATE SYNONYM products_fr FOR products@ecommerce.fr;
-CREATE SYNONYM taxons_fr FOR products@ecommerce.fr;
-CREATE SYNONYM users_fr FOR users@ecommerce.fr;
+CREATE SYNONYM products_us FOR products@ecommerce.fr;
+CREATE SYNONYM taxons_us FOR products@ecommerce.fr;
+CREATE SYNONYM users_us FOR users@ecommerce.fr;
 CREATE SYNONYM users_secure FOR users@ecommerce.secure;
-CREATE SYNONYM orders_fr FOR orders@ecommerce.fr;
-CREATE SYNONYM variants_fr FOR variants@ecommerce.fr;
-CREATE SYNONYM payments_fr FOR payments@ecommerce.fr;
-CREATE SYNONYM payment_methods_fr FOR payment_methods@ecommerce.fr;
-CREATE SYNONYM addresses_fr FOR addresses@ecommerce.fr;
-CREATE SYNONYM shipments_fr FOR shipments@ecommerce.fr;
-CREATE SYNONYM inventory_units_fr FOR inventory_units@ecommerce.fr;
-CREATE SYNONYM line_items_fr FOR line_items@ecommerce.fr;
-CREATE SYNONYM images_fr FOR images@ecommerce.fr;
+CREATE SYNONYM orders_us FOR orders@ecommerce.fr;
+CREATE SYNONYM variants_us FOR variants@ecommerce.fr;
+CREATE SYNONYM payments_us FOR payments@ecommerce.fr;
+CREATE SYNONYM payment_methods_us FOR payment_methods@ecommerce.fr;
+CREATE SYNONYM addresses_us FOR addresses@ecommerce.fr;
+CREATE SYNONYM shipments_us FOR shipments@ecommerce.fr;
+CREATE SYNONYM inventory_units_us FOR inventory_units@ecommerce.fr;
+CREATE SYNONYM line_items_us FOR line_items@ecommerce.fr;
+CREATE SYNONYM images_us FOR images@ecommerce.fr;
 
 -- -------------------------------
 -- VIEWS
@@ -252,51 +252,51 @@ DROP VIEW IF EXISTS images_view;
 
 CREATE VIEW   products_view AS
 SELECT * FROM products UNION 
-SELECT * FROM products_fr;
+SELECT * FROM products_us;
 
 CREATE VIEW   taxons_view AS
 SELECT * FROM taxons UNION 
-SELECT * FROM taxons_fr;
+SELECT * FROM taxons_us;
 
 CREATE VIEW   users_view AS
 SELECT * FROM users UNION 
-SELECT * FROM users_fr;
+SELECT * FROM users_us;
 
 CREATE VIEW   orders_view AS
 SELECT * FROM orders UNION 
-SELECT * FROM orders_fr;
+SELECT * FROM orders_us;
 
 CREATE VIEW   variants_view AS
 SELECT * FROM variants UNION 
-SELECT * FROM variants_fr;
+SELECT * FROM variants_us;
 
 CREATE VIEW   payments_view AS
 SELECT * FROM payments UNION 
-SELECT * FROM payments_fr;
+SELECT * FROM payments_us;
 
 CREATE VIEW   payment_methods_view AS
 SELECT * FROM payment_methods UNION 
-SELECT * FROM payment_methods_fr;
+SELECT * FROM payment_methods_us;
 
 CREATE VIEW   addresses_view AS
 SELECT * FROM addresses UNION 
-SELECT * FROM addresses_fr;
+SELECT * FROM addresses_us;
 
 CREATE VIEW   shipments_view AS
 SELECT * FROM shipments UNION 
-SELECT * FROM shipments_fr;
+SELECT * FROM shipments_us;
 
 CREATE VIEW   inventory_units_view AS
 SELECT * FROM inventory_units UNION 
-SELECT * FROM inventory_units_fr;
+SELECT * FROM inventory_units_us;
 
 CREATE VIEW   line_items_view AS
 SELECT * FROM line_items UNION 
-SELECT * FROM line_items_fr;
+SELECT * FROM line_items_us;
 
 CREATE VIEW   images_view AS
 SELECT * FROM images UNION 
-SELECT * FROM images_fr;
+SELECT * FROM images_us;
 
 CREATE VIEW   users_secure_view AS
 SELECT * FROM users u, users_secure us

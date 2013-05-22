@@ -1,0 +1,5 @@
+#!/bin/bash
+source ./profile
+cd tests/
+echo "startup" | sqlplus "/as sysdba" @queries.sql
+cd ../
