@@ -1,6 +1,6 @@
 #!/bin/bash
 source /export/home/oracle/oraenv.sh
 export ORACLE_SID=ecommerceus
-sqlplus toto/toto @./migrate.sql
-sqlplus toto/toto @./views.sql
-sqlplus toto/toto @./seed.sql
+sqlplus toto/toto @./sql/migrate.sql
+sqlplus toto/toto @./sql/views.sql
+sqlplus toto/toto @./sql/seed.sql

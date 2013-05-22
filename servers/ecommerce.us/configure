@@ -1,4 +1,4 @@
-VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/HostPort" 2222
+VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/HostPort" 2221
 VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/GuestPort" 22
 VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/Protocol" TCP
 VBoxManage setextradata ecommerceus "VBoxInternal/Devices/pcnet/0/LUN#0/Config/oracle/HostPort" 1520
